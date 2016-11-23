@@ -1,2 +1,2 @@
 # monitormio
-使用主要使用electron
+主要使用electron
