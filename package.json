@@ -1,17 +1,20 @@
 {
-    "name" : "monitormio",
-    "version": "0.1.0",
-    "main": "main.js",
-    "scripts": {
-        "build":"tsc",
-        "prestart": "npm run build",
-        "start": "electron .",
-        "pack":"electron-packager . sample --out=dist --arch=x64 --platform=win32 --version=1.4.4 --overwrite --prune --ignore=dist --ignore=typings"
-    },
-    "devDependencies": {
-        "@types/electron":"^1.4.24",
-        "electron-packager":"^8.1.0",
-        "electron-prebuilt":"^1.4.8",
-        "typescript":"^2.0.3"
-    }
+  "name": "monitormio",
+  "version": "0.1.0",
+  "main": "main.js",
+  "scripts": {
+    "build": "tsc",
+    "prestart": "npm run build",
+    "start": "electron .",
+    "pack": "electron-packager . sample --out=dist --arch=x64 --platform=win32 --version=1.4.4 --overwrite --prune --ignore=dist --ignore=typings"
+  },
+  "devDependencies": {
+    "@types/electron": "^1.4.24",
+    "@types/jade": "0.0.30",
+    "@types/jquery": "^2.0.41",
+    "electron-packager": "^8.1.0",
+    "electron-prebuilt": "^1.4.8",
+    "jquery": "^3.1.1",
+    "typescript": "^2.0.3"
+  }
 }
