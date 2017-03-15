@@ -3,7 +3,7 @@ import * as fs from 'fs';
 import * as path from 'path';
 import * as jade from 'jade';
 import * as util from 'util';
-// import * as mime from 'mine';
+import * as mime from 'mime';
 
 // Template
 let gen_files_view = jade.compile([
@@ -36,7 +36,7 @@ function Folder(jquery_element) {
     // double click on file
     this.element.delegate('.file', 'dbclick', function () {
         let file_path = $(this).attr('data-path');
-        // self.emit('navigate', file_path, mime.stat(file_path));
+        self.emit('navigate', file_path, mime.stat(file_path));
     })
 }
 
@@ -50,8 +50,8 @@ Folder.prototype.open = function (dir) {
             window.alert(error);
         }
 
-        for (var i = 0; i < files.length; i++) {
-            // var files[i] = mime.stat();
+        for (let i = 0; i < files.length; i++) {
+            files[i] = mime.stat(path.join(dir, files[i]));
         }
 
         self.element.html(gen_files_view({ files: files }));
