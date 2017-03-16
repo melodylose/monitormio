@@ -3,12 +3,19 @@
     <head>
         <meta charset="UTF-8"/>
         <title>view</title>
+        <link rel="stylesheet" href="../style.css">
+        <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
         <script type="text/javascript" src="../dist/type/fileexplore.js"></script>
     </head>
     <body>
         <div style="position:absolute; left: 10px; right: 10px; top: 10px; bottom: 10px;">
-            <div style="background: #FFF; -webkit-border-radius: 2px; margin: -5px 1px 0 -19px; height: 100%; overflow: auto;">
-                <ul id="files" style="margin: 5px;"></ul>
+            <div style="float: left; position: absolute;">
+                <div class="row">
+                    <ul id="addressbar" class="breadcrumb"></ul>
+                </div>
+                <div class="row" style="background: #FFF; -webkit-border-radius: 2px; margin: -5px 1px 0 -19px; height: 100%; overflow: auto;">
+                    <ul id="files" style="margin: 5px;"></ul>
+                </div>
             </div>
         </div>
     </body>

@@ -14,12 +14,12 @@ let gen_files_view = jade.compile([
     '    .name #{file.name}',
 ].join('\n'));
 
-function Folder(jquery_element) {
+function Folder(jquery_element: JQuery) {
     events.EventEmitter.call(this);
-
+    
     this.element = jquery_element;
 
-    let self = this;
+    var self = this;
 
     // click on blank
     this.element.parent().on('click', function () {
@@ -34,7 +34,7 @@ function Folder(jquery_element) {
     });
 
     // double click on file
-    this.element.delegate('.file', 'dbclick', function () {
+    this.element.delegate('.file', 'dblclick', function () {
         let file_path = $(this).attr('data-path');
         self.emit('navigate', file_path, mime.stat(file_path));
     })
